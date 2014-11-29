@@ -27,7 +27,6 @@ ADD config/nginx.conf /etc/nginx/nginx.conf
 
 # install owncloud
 RUN curl -k https://download.owncloud.org/community/owncloud-7.0.2.tar.bz2 | tar jx -C /var/www/
-RUN mkdir /var/www/owncloud/data
 RUN chown -R www-data:www-data /var/www/owncloud
 
 # install mysql
@@ -39,5 +38,3 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN chmod +x /init.sh
 
 EXPOSE 80
-
-VOLUME ["/var/www/owncloud/data"]
