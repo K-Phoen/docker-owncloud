@@ -25,3 +25,4 @@ docker run -p 80:80 --volumes-from owncloud-data kphoen/owncloud
 
   * Create a data container for MySQL
   * Provide fig integration
+  * Configure HTTPS access
